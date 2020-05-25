@@ -1,8 +1,8 @@
 package com.controller;
 
-import com.model.functions.HardFunction;
+import com.model.HardFunction;
 import com.view.MainWindow;
-import com.view.consts.Color;
+import com.view.Color;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.MouseListener;

@@ -37,12 +37,12 @@ public class ChartField {
         series.setXSeries(seriesX);
     }
 
-    public void setColor(String seriesDescription, com.view.consts.Color color) {
+    public void setColor(String seriesDescription, com.view.Color color) {
         ILineSeries series = (ILineSeries) chart.getSeriesSet().getSeries(seriesDescription);
         Display display = this.chart.getDisplay();
-        if (color == com.view.consts.Color.RED)
+        if (color == com.view.Color.RED)
             series.setLineColor(new Color(display, 255, 0, 0));
-        else if (color == com.view.consts.Color.BLUE)
+        else if (color == com.view.Color.BLUE)
             series.setLineColor(new Color(display, 0, 0, 255));
     }
 

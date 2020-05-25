@@ -6,8 +6,8 @@ import java.util.List;
 public abstract class Function {
     private final double step = 0.1;
     protected int aParam;
-    double[] Xes;
-    double[] Yes;
+    double[] X;
+    double[] Y;
     int topValue;
     int bottomValue;
 
@@ -21,21 +21,21 @@ public abstract class Function {
             xes.add(i);
             yes.add(calculateY(i));
         }
-        Xes = new double[xes.size()];
-        Yes = new double[yes.size()];
+        X = new double[xes.size()];
+        Y = new double[yes.size()];
         for (int i = 0; i < xes.size(); i++) {
-            Xes[i] = xes.get(i);
-            Yes[i] = yes.get(i);
+            X[i] = xes.get(i);
+            Y[i] = yes.get(i);
         }
     }
 
     public abstract double calculateY(double x);
 
     public double[] getXes() {
-        return Xes;
+        return X;
     }
 
     public double[] getYes() {
-        return Yes;
+        return Y;
     }
 }
