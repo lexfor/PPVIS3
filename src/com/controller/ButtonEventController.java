@@ -1,6 +1,6 @@
 package com.controller;
 
-import com.model.HardFunction;
+import com.model.SecondFunction;
 import com.view.MainWindow;
 import com.view.Color;
 import org.eclipse.swt.SWT;
@@ -26,9 +26,9 @@ public class ButtonEventController {
                 int bottom = window.getFunctionParamSpinner().getSelection();
                 int a = window.getFunctionStep().getSelection();
                 int top = -bottom;
-                HardFunction second = new HardFunction(bottom,top, a);
-                window.chartField.addChart("Second", second.getXes(), second.getYes());
-                window.chartField.setColor("Second", Color.RED);
+                SecondFunction second = new SecondFunction(bottom,top, a);
+                window.chartField.addChart("Second function", second.getXes(), second.getYes());
+                window.chartField.setColor("Second function", Color.RED);
                 window.chartField.redraw();
                 window.getTable().removeAll();
                 for (int loopIndex = 0; loopIndex < second.getXes().length; loopIndex++) {

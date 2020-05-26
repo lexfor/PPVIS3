@@ -95,7 +95,7 @@ public class MainWindow {
     protected void createShell() {
         this.shlChartDrawer = new Shell();
         this.shlChartDrawer.setMinimumSize(new Point(640, 480));
-        this.shlChartDrawer.setText("ChartDrawer");
+        this.shlChartDrawer.setText("Drawing");
         this.shlChartDrawer.setLayout(new FormLayout());
     }
 
@@ -171,14 +171,14 @@ public class MainWindow {
         fd_btnNewButton_2.bottom = new FormAttachment(table, 0, SWT.BOTTOM);
         fd_btnNewButton_2.left = new FormAttachment(functionStep, 6);
         zoomInButton.setLayoutData(fd_btnNewButton_2);
-        zoomInButton.setText("+");
+        zoomInButton.setText("Scroll up");
 
         zoomOutButton = new Button(shlChartDrawer, SWT.NONE);
         FormData fd_button = new FormData();
         fd_button.top = new FormAttachment(this.chartComposite, 6);
         fd_button.left = new FormAttachment(zoomInButton, 6);
         zoomOutButton.setLayoutData(fd_button);
-        zoomOutButton.setText("-");
+        zoomOutButton.setText("Scroll down");
     }
 }
 

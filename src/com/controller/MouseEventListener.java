@@ -7,13 +7,13 @@ import org.eclipse.swt.events.MouseListener;
 import org.eclipse.swt.events.MouseMoveListener;
 import org.eclipse.swtchart.IAxis;
 
-public class DragEventListener implements MouseListener, MouseMoveListener {
+public class MouseEventListener implements MouseListener, MouseMoveListener {
 
     private final MainWindow window;
     private final Pair<Integer> cursorCoordinates;
     private boolean isDragging;
 
-    public DragEventListener(MainWindow window) {
+    public MouseEventListener(MainWindow window) {
         this.window = window;
         this.isDragging = false;
         this.cursorCoordinates = new Pair<>();
@@ -64,7 +64,6 @@ public class DragEventListener implements MouseListener, MouseMoveListener {
     }
 
     private Pair<Pair<Boolean>> getDirection(Pair<Integer> currentCursorCoordinates) {
-        // {{Left, Right}, {Up, Down}}
 
         Pair<Pair<Boolean>> direction = new Pair<>();
         Pair<Boolean> leftRight = new Pair<>();
@@ -75,10 +74,10 @@ public class DragEventListener implements MouseListener, MouseMoveListener {
         int currentX = currentCursorCoordinates.getFirst();
         int currentY = currentCursorCoordinates.getSecond();
 
-        leftRight.setFirst(currentX < prevX + 20);    // If X coordinate has decreased - cursor is moving left
-        leftRight.setSecond(currentX > prevX - 20);   // If X coordinate has increased - cursor is moving right
-        upDown.setFirst(currentY < prevY + 20);       // If Y coordinate has decreased - cursor is moving up
-        upDown.setSecond(currentY > prevY - 20);      // If Y coordinate has increased - cursor is moving down
+        leftRight.setFirst(currentX < prevX + 10);
+        leftRight.setSecond(currentX > prevX - 10);
+        upDown.setFirst(currentY < prevY + 10);
+        upDown.setSecond(currentY > prevY - 10);
 
         direction.put(leftRight, upDown);
 

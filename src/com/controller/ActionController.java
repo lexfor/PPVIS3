@@ -10,8 +10,8 @@ public class ActionController {
     }
 
     public void addEventListeners() {
-        ZoomEventListener zoomEventListener = new ZoomEventListener(window);
-        DragEventListener dragEventListener = new DragEventListener(window);
+        Zoom zoomEventListener = new Zoom(window);
+        MouseEventListener dragEventListener = new MouseEventListener(window);
         ButtonEventController buttonEventController = new ButtonEventController(window);
     }
 }

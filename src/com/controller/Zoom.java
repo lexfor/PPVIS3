@@ -7,12 +7,12 @@ import org.eclipse.swt.events.MouseListener;
 import org.eclipse.swt.events.MouseWheelListener;
 import org.eclipse.swt.widgets.Button;
 
-public class ZoomEventListener implements MouseListener, MouseWheelListener {
+public class Zoom implements MouseListener, MouseWheelListener {
 
     private final MainWindow window;
     private long zoomCounter = 0;
 
-    public ZoomEventListener(MainWindow window) {
+    public Zoom(MainWindow window) {
         this.window = window;
         this.window.getZoomInButton().addMouseListener(this);
         this.window.getZoomOutButton().addMouseListener(this);

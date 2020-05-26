@@ -2,9 +2,9 @@ package com.model;
 
 import com.model.Function;
 
-public class HardFunction extends Function {
+public class SecondFunction extends Function {
 
-    public HardFunction(int topValue, int bottomValue, int aParam) {
+    public SecondFunction(int topValue, int bottomValue, int aParam) {
         super(topValue, bottomValue, aParam);
     }
 
