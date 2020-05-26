@@ -7,10 +7,10 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swtchart.*;
 
 
-public class ChartField {
+public class Field {
     private final org.eclipse.swtchart.Chart chart;
 
-    ChartField(Composite composite) {
+    Field(Composite composite) {
         this.chart = new org.eclipse.swtchart.Chart(composite, SWT.FILL);
         chart.getTitle().setVisible(false);
         chart.getAxisSet().getXAxis(0).getTitle().setVisible(false);

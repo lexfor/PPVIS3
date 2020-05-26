@@ -11,7 +11,7 @@ import org.eclipse.swt.widgets.*;
 
 public class MainWindow {
 
-    public ChartField chartField;
+    public Field chartField;
     protected Shell shlChartDrawer;
     private Composite chartComposite;
     private Display display;
@@ -109,7 +109,7 @@ public class MainWindow {
         fd_composite.left = new FormAttachment(0);
         this.chartComposite.setLayoutData(fd_composite);
 
-        this.chartField = new ChartField(this.chartComposite);
+        this.chartField = new Field(this.chartComposite);
     }
 
     public void clearTable() {
